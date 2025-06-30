@@ -1,6 +1,7 @@
 #!/bin/bash
 
 kubectl apply -f .infrastructure/namespace.yml
+kubectl config set-context --current --namespace=todoapp
 kubectl apply -f .infrastructure/clusterIp.yml
 kubectl apply -f .infrastructure/nodeport.yml
 kubectl apply -f .infrastructure/configMap.yml
